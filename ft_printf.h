@@ -26,3 +26,4 @@ int	ft_print_pointer_hex(void *ptr);
 int	ft_print_number(int n);
 
 #endif
+/*git@github.com:Lckzncs/Printf.git*/

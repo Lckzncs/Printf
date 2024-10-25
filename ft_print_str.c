@@ -19,10 +19,11 @@ int	ft_print_str(char *str)
 
 	count = 0;
 	i = 0;
+	if (!str)
+		return (write(1, "(null)", 6));
 	while (str[i])
 	{
-		if (write(1, &str[i], 1) != 1)
-			return (-1);
+		write(1, &str[i], 1);
 		i++;
 		count++;
 	}

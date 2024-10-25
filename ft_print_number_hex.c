@@ -24,10 +24,9 @@ int	ft_print_number_hex(unsigned int n, int upper)
 		base = "0123456789abcdef";
 	if (n >= 16)
 	{
-		ft_print_number_hex(n / 16, upper);
+		count = count + ft_print_number_hex(n / 16, upper);
 	}
-	if (write(1, &base[n % 16], 1) != 1)
-		return (-1);
+	write(1, &base[n % 16], 1);
 	count++;
 	return (count);
 }

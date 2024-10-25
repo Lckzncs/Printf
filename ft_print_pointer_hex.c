@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-static int	ft_hex(unsigned long n)
+static int	ft_hex(size_t n)
 {
 	char	*base;
 	int		count;
@@ -23,8 +23,7 @@ static int	ft_hex(unsigned long n)
 	{
 		count = count + ft_hex(n / 16);
 	}
-	if (write(1, &base[n % 16], 1) != 1)
-		return (-1);
+	write(1, &base[n % 16], 1);
 	count++;
 	return (count);
 }
@@ -37,9 +36,10 @@ int	ft_print_pointer_hex(void *ptr)
 	count = 0;
 	a = (unsigned long)ptr;
 	if (ptr == NULL)
+	{
 		return (write(1, "(nil)", 5));
-	if (write(1, "0x", 2) != 2)
-		return (-1);
+	}
+	write(1, "0x", 2);
 	count = count + 2;
 	count = count + ft_hex(a);
 	return (count);

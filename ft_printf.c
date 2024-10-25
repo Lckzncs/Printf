@@ -22,15 +22,15 @@ static	int	ft_placeholder(char *pch, va_list *list)
 	else if (*pch == 's')
 		count = ft_print_str(va_arg(*list, char *));
 	else if (*pch == 'p')
-		count = ft_print_pointer_hex(va_arg(*list, void *));
+		count += ft_print_pointer_hex(va_arg(*list, void *));
 	else if (*pch == 'i' || *pch == 'd')
-		count = ft_print_number(va_arg(*list, int));
+		count += ft_print_number(va_arg(*list, int));
 	else if (*pch == 'u')
-		count = ft_print_unsigned_int(va_arg(*list, unsigned int));
+		count += ft_print_unsigned_int(va_arg(*list, unsigned int));
 	else if (*pch == 'x')
-		count = ft_print_number_hex(va_arg(*list, unsigned int), 0);
+		count += ft_print_number_hex(va_arg(*list, unsigned int), 0);
 	else if (*pch == 'X')
-		count = ft_print_number_hex(va_arg(*list, unsigned int), 1);
+		count += ft_print_number_hex(va_arg(*list, unsigned int), 1);
 	else if (*pch == '%')
 		count = ft_print_char('%');
 	return (count);
@@ -62,3 +62,8 @@ int	ft_printf(char const *format, ...)
 	va_end(pch);
 	return (count);
 }
+/* int main(void)
+{
+	ft_printf("Hello %s, your score is %d!", "Alice", 95);
+	return (0);
+} */

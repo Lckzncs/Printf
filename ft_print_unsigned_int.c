@@ -23,8 +23,7 @@ int	ft_print_unsigned_int(unsigned int n)
 		count = count + ft_print_unsigned_int(n / 10);
 	}
 	digit = '0' + (n % 10);
-	if (write(1, &digit, 1) != 1)
-		return (-1);
+	write(1, &digit, 1);
 	count++;
 	return (count);
 }

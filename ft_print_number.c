@@ -34,8 +34,7 @@ int	ft_print_number(int n)
 		count = count + ft_print_number(n / 10);
 	}
 	digit = (n % 10) + '0';
-	if (write (1, &digit, 1) != 1)
-		return (-1);
+	write (1, &digit, 1);
 	count++;
 	return (count);
 }
