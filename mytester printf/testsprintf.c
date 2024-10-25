@@ -1,5 +1,6 @@
 /*
 //TESTS PLACEHOLDER
+#include "ft_printf.h"
 int main(void)
 {
     char *str = "brasil";
@@ -25,6 +26,7 @@ int main(void)
 /*
 //TESTS RAROS
 #include <limits.h> // INT_MAX e INT_MIN
+#include "ft_printf.h"
 int main(void)
 {
     // Teste 1: String vazia
@@ -63,6 +65,7 @@ int main(void)
 #include <limits.h>
 #include <stdio.h>
 #include <string.h>
+#include "ft_printf.h"
 int main(void)
 {
     int ret_original, ret_custom;
