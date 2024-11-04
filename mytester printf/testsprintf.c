@@ -1,4 +1,4 @@
-/*
+
 //TESTS PLACEHOLDER
 #include "ft_printf.h"
 int main(void)
@@ -22,7 +22,7 @@ int main(void)
 
     return 0;
 }
-*/
+
 /*
 //TESTS RAROS
 #include <limits.h> // INT_MAX e INT_MIN
